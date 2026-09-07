@@ -1,0 +1,37 @@
+query Users {
+  users {
+    id
+    name
+    email
+    createdAt
+  }
+}
+
+query UsersConsoleExample {
+  users {
+    id
+    name
+  }
+}
+
+mutation CreateUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    id
+    name
+    email
+    createdAt
+  }
+}
+
+# Cette opération non affichée garde un consommateur client de Post.title :
+# le renommage documenté dans le README échoue pendant la génération.
+query PostContractProbe($id: ID!) {
+  post(id: $id) {
+    id
+    title
+    author {
+      id
+      name
+    }
+  }
+}

@@ -1,0 +1,33 @@
+scalar DateTime
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  createdAt: DateTime!
+  posts: [Post!]!
+}
+
+type Post {
+  id: ID!
+  userId: ID!
+  title: String!
+  body: String!
+  createdAt: DateTime!
+  author: User!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+}
+
+type Query {
+  users: [User!]!
+  user(id: ID!): User!
+  post(id: ID!): Post!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+}

@@ -1,0 +1,31 @@
+{
+  "name": "graphql-front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "lint": "oxlint src"
+  },
+  "dependencies": {
+    "@demo/repositories": "file:../../shared",
+    "@urql/core": "5.2.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-hook-form": "7.87.0",
+    "urql": "5.0.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "6.1.0",
+    "@graphql-codegen/client-preset": "5.1.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.1.0",
+    "oxlint": "1.79.0",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "graphql-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@demo/repositories": "file:../../shared",
+    "graphql": "16.11.0",
+    "graphql-yoga": "5.16.0",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "6.1.0",
+    "@graphql-codegen/typescript": "5.0.6",
+    "@graphql-codegen/typescript-resolvers": "5.1.4",
+    "@types/bun": "1.4.1",
+    "typescript": "7.0.2"
+  }
+}
